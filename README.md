@@ -85,6 +85,35 @@ All dependencies are loaded via CDN:
 - Swiper.js
 - Accordion.js
 
+## Implementation Guide
+
+### Adding New Pages
+1. Create a new HTML file based on the existing structure
+2. Ensure consistent header and footer content
+3. Link to the main CSS file (`assets/css/main.css`)
+4. Add navigation links in both desktop and mobile menus
+
+### Modifying Styles
+1. All CSS should be added to `assets/css/main.css`
+2. Use existing classes as examples for consistency
+3. Follow the mobile-first approach with appropriate media queries
+
+### Adding New Features
+1. Add HTML structure in the appropriate section
+2. Implement CSS in `assets/css/main.css`
+3. Add JavaScript functionality in `script.js` if needed
+4. Test across different device sizes
+
+### Working with the Chatbox
+1. The chatbox uses simple pattern matching for responses
+2. Add new response patterns in the `getAIResponse` function
+3. Ensure responses are in Vietnamese for consistency
+
+### Updating the Image Gallery
+1. Add new images to the `img/` directory
+2. Update the Swiper carousel HTML with new image tags
+3. Ensure images are properly optimized for web
+
 ## Contributing
 
 1. Fork the repository
@@ -92,6 +121,19 @@ All dependencies are loaded via CDN:
 3. Commit your changes
 4. Push to the branch
 5. Create a pull request
+
+### Code Standards
+- Follow existing code formatting and structure
+- Use semantic HTML elements
+- Maintain consistent CSS class naming
+- Comment complex JavaScript functionality
+- Test changes across different browsers
+
+### Reporting Issues
+- Use the GitHub Issues tracker
+- Provide detailed descriptions of problems
+- Include steps to reproduce issues
+- Specify browser and device information
 
 ## Author
 
