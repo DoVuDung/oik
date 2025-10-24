@@ -1,4 +1,6 @@
-/* Reset and Base Styles */
+/* Main CSS file combining reusable styles from across the OIK website */
+
+/* Base Styles - from styles.css */
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +61,7 @@ ul {
     color: white;
 }
 
-/* Navigation */
+/* Navigation Styles - combined from various files */
 .navbar {
     position: fixed;
     top: 0;
@@ -114,223 +116,19 @@ ul {
     transition: 0.3s;
 }
 
-/* Mobile Menu Submenu Styles - Accordion-like behavior */
-[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu] {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-    text-align: left;
-    background: none;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu]:hover {
-    color: #4e54c8;
-}
-
-[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu] i {
-    transition: transform 0.3s ease;
-}
-
-[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu].active i {
-    transform: rotate(180deg);
-}
-
-[data-menu-mobile] .space-y-4 > li > ul {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    margin-top: 0.5rem;
-}
-
-[data-menu-mobile] .space-y-4 > li > ul.expanded {
-    max-height: 500px; /* Adjust based on content */
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(78, 84, 200, 0.8), rgba(78, 84, 200, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+/* News Meta Styles - from news pages */
+.news-meta {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    font-size: 0.875rem;
+    color: #6b7280;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+.news-meta i {
+    margin-right: 0.25rem;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-buttons {
-    margin-top: 30px;
-}
-
-.hero-buttons .btn {
-    margin: 0 10px;
-}
-
-/* Features Section */
-.features {
-    padding: 80px 0;
-    background-color: #f8f9fa;
-}
-
-.feature-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.feature-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    flex: 1;
-    margin: 0 15px;
-    transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: #4e54c8;
-    margin-bottom: 20px;
-}
-
-.feature-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.feature-card p {
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.feature-link {
-    color: #4e54c8;
-    font-weight: 600;
-}
-
-/* Programs Section */
-.programs {
-    padding: 80px 0;
-}
-
-.programs-container {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.programs-text {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.programs-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.programs-text p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.programs-text ul {
-    margin-bottom: 30px;
-}
-
-.programs-text ul li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-}
-
-.programs-text ul li::before {
-    content: "✓";
-    color: #4e54c8;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-.programs-images {
-    flex: 1;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-}
-
-.image-grid img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Stats Section */
-.stats {
-    padding: 80px 0;
-    background-color: #4e54c8;
-    color: white;
-}
-
-.stats-container {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-item h3 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.stat-item p {
-    font-size: 1.1rem;
-}
-
-/* Chatbox */
+/* Chatbox Styles - combined from various sources */
 .chatbox-container {
     position: fixed;
     bottom: 80px;
@@ -436,59 +234,38 @@ ul {
     z-index: 1001;
 }
 
-/* Footer */
-.footer {
-    background-color: #333;
+/* Chatbox Preview Styles - from chatbox-guide.css */
+.chatbox-preview {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Removed position: relative and z-index: 1 to prevent stacking context issues */
+}
+
+.chat-message {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-width: 80%;
+}
+
+.bot-message-preview {
+    background-color: #e9ecef;
+    align-self: flex-start;
+}
+
+.user-message-preview {
+    background-color: #4e54c8;
     color: white;
-    padding: 50px 0 20px;
+    align-self: flex-end;
+    margin-left: auto;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    margin-bottom: 30px;
-}
-
-.footer-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.footer-info p {
-    color: #ccc;
-}
-
-.footer-links a {
-    display: block;
-    color: #ccc;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-social a {
-    display: inline-block;
-    color: white;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-    color: #4e54c8;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #555;
-    color: #ccc;
+/* FAQ Section Styles */
+.faq-section {
+    /* No z-index needed for normal document flow */
 }
 
 /* Accordion Styles for FAQ */
@@ -520,6 +297,180 @@ ul {
 
 .ac-text {
     position: relative;
+}
+
+/* User profile display */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: #f0f5ff;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #4e54c8;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4e54c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Mobile Menu Submenu Styles - Accordion-like behavior */
+[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu] {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu]:hover {
+    color: #4e54c8;
+}
+
+[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu] i {
+    transition: transform 0.3s ease;
+}
+
+[data-menu-mobile] .space-y-4 > li > button[data-menu-submenu].active i {
+    transform: rotate(180deg);
+}
+
+[data-menu-mobile] .space-y-4 > li > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+[data-menu-mobile] .space-y-4 > li > ul.expanded {
+    max-height: 500px; /* Adjust based on content */
+}
+
+/* Utility Classes */
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #4e54c8;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #4e54c8;
+    margin-bottom: 1rem;
+}
+
+.code-block {
+    background-color: #f1f3f5;
+    border-left: 4px solid #4e54c8;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Modal Styles - from index.html */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4e54c8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #3a40b0;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-footer a {
+    color: #4e54c8;
+    cursor: pointer;
 }
 
 /* Responsive Design */

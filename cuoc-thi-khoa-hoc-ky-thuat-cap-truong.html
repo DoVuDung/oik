@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cuộc thi khoa học kỹ thuật cấp trường - Trường THPT Ông Ích Khiêm">
+  <title>Cuộc thi khoa học kỹ thuật cấp trường - THPT Ông Ích Khiêm</title>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap"></noscript>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="overflow-x-hidden font-sans">
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2 hover:opacity-90 transition-opacity">
+        <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+        <span class="text-xl font-bold text-blue-600">THPT Ông Ích Khiêm</span>
+      </a>
+
+      <div data-menu-desktop-wrapper>
+        <!-- Desktop Menu -->
+        <nav data-menu-desktop class="hidden md:block">
+          <ul class="flex items-center space-x-8">
+            <li class="relative group">
+              <a href="gioi-thieu.html" class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 transition-colors">
+                Giới thiệu <i class="fas fa-chevron-down text-xs mt-1"></i>
+              </a>
+              <ul class="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md py-2 hidden group-hover:block">
+                <li><a href="gioi-thieu.html#history" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Lịch sử</a></li>
+                <li><a href="gioi-thieu.html#principal" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Ban giám hiệu</a></li>
+                <li><a href="gioi-thieu.html#facilities" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Cơ sở vật chất</a></li>
+              </ul>
+            </li>
+            <li><a href="tin-tuc.html" class="text-blue-600 font-medium transition-colors">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Liên hệ</a></li>
+            <li><a href="huong-dan-chatbox.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Hướng dẫn</a></li>
+          </ul>
+        </nav>
+
+        <button data-menu-toggle class="md:hidden text-gray-700" aria-label="Mở menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div data-menu-mobile class="hidden md:hidden bg-white border-t py-4 px-4">
+      <ul class="space-y-4">
+        <li>
+          <button data-menu-submenu class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-blue-600" aria-label="Mở submenu">
+            Giới thiệu <i class="fas fa-chevron-down text-xs"></i>
+          </button>
+          <ul class="hidden pl-4 space-y-2 mt-2">
+            <li><a href="gioi-thieu.html#history" class="block py-2 text-gray-700 hover:text-blue-600">Lịch sử</a></li>
+            <li><a href="gioi-thieu.html#principal" class="block py-2 text-gray-700 hover:text-blue-600">Ban giám hiệu</a></li>
+            <li><a href="gioi-thieu.html#facilities" class="block py-2 text-gray-700 hover:text-blue-600">Cơ sở vật chất</a></li>
+          </ul>
+        </li>
+        <li><a href="tin-tuc.html" class="block py-2 text-blue-600 font-medium">Tin tức</a></li>
+        <li><a href="tuyen-sinh.html" class="block py-2 text-gray-700 hover:text-blue-600">Tuyển sinh</a></li>
+        <li><a href="index.html#contact" class="block py-2 text-gray-700 hover:text-blue-600">Liên hệ</a></li>
+        <li><a href="huong-dan-chatbox.html" class="block py-2 text-gray-700 hover:text-blue-600">Hướng dẫn</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-gray-100 py-4">
+    <div class="container mx-auto px-4">
+      <ol class="flex items-center text-gray-600">
+        <li><a href="index.html" class="hover:text-blue-600">Trang chủ</a></li>
+        <li class="mx-2">/</li>
+        <li><a href="tin-tuc.html" class="hover:text-blue-600">Tin tức</a></li>
+        <li class="mx-2">/</li>
+        <li class="text-gray-800">Cuộc thi khoa học kỹ thuật cấp trường</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- News Detail Content -->
+  <main class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Main Content -->
+        <div class="lg:w-2/3">
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <img src="img/news3.jpg" alt="Cuộc thi khoa học kỹ thuật cấp trường" class="w-full h-96 object-cover">
+            <div class="p-8">
+              <div class="news-meta mb-4">
+                <span><i class="far fa-calendar-alt mr-1"></i> 05/06/2025</span>
+                <span class="mx-3">|</span>
+                <span><i class="far fa-eye mr-1"></i> 1.5k lượt xem</span>
+                <span class="mx-3">|</span>
+                <span><i class="fas fa-tag mr-1"></i> Khoa học kỹ thuật</span>
+              </div>
+              <h1 class="text-3xl font-bold text-gray-800 mb-6">Cuộc thi khoa học kỹ thuật cấp trường</h1>
+              
+              <div class="prose max-w-none">
+                <p class="text-gray-600 mb-4">Cuộc thi khoa học kỹ thuật cấp trường năm học 2024-2025 của Trường THPT Ông Ích Khiêm đã diễn ra thành công rực rỡ vào ngày 05/06/2025. Với chủ đề "Sáng tạo vì một tương lai bền vững", cuộc thi đã thu hút hơn 150 học sinh tham gia với 80 sản phẩm sáng tạo.</p>
+                
+                <p class="text-gray-600 mb-4">Phát biểu khai mạc cuộc thi, cô Trần Thị E, Tổ trưởng bộ môn Vật lý nhấn mạnh: "Cuộc thi là cơ hội để các em học sinh thể hiện tài năng, sáng tạo trong việc ứng dụng kiến thức khoa học kỹ thuật vào giải quyết các vấn đề thực tiễn trong cuộc sống."</p>
+                
+                <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Những sản phẩm ấn tượng</h2>
+                
+                <p class="text-gray-600 mb-4">Các sản phẩm dự thi được chia thành hai nhóm: Kỹ thuật và Khoa học. Nhiều sản phẩm đã thể hiện sự sáng tạo và ứng dụng thực tiễn cao:</p>
+                
+                <ul class="list-disc pl-6 text-gray-600 mb-4">
+                  <li>Máy tưới tự động sử dụng năng lượng mặt trời do nhóm học sinh lớp 11A1 chế tạo</li>
+                  <li>Thiết bị phát hiện và cảnh báo ô nhiễm không khí do nhóm lớp 12B3 thực hiện</li>
+                  <li>Mô hình xử lý rác thải sinh hoạt theo phương pháp ủ phân compost</li>
+                  <li>Ứng dụng di động quản lý học tập và thời gian biểu cho học sinh</li>
+                </ul>
+                
+                <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Giải thưởng và vinh danh</h2>
+                
+                <p class="text-gray-600 mb-4">Ban giám khảo đã chọn ra 15 sản phẩm xuất sắc nhất để trao giải, trong đó có 3 giải nhất, 5 giải nhì và 7 giải ba. Các sản phẩm đạt giải sẽ được chọn để tham dự cuộc thi cấp thành phố.</p>
+                
+                <blockquote class="border-l-4 border-blue-600 pl-4 py-2 my-6 italic text-gray-700">
+                  "Tôi rất ấn tượng với mức độ sáng tạo và kỹ thuật của các em. Nhiều sản phẩm không chỉ có giá trị học thuật mà còn có tiềm năng ứng dụng thực tế." - Thầy Nguyễn Văn F, Thành viên ban giám khảo
+                </blockquote>
+                
+                <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Định hướng phát triển</h2>
+                
+                <p class="text-gray-600 mb-4">Nhà trường sẽ tiếp tục đầu tư cơ sở vật chất, thiết bị thí nghiệm và tổ chức các câu lạc bộ khoa học kỹ thuật để khuyến khích học sinh tham gia nghiên cứu khoa học. Các sản phẩm xuất sắc sẽ được hỗ trợ hoàn thiện để đăng ký bản quyền sáng chế.</p>
+                
+                <p class="text-gray-600 mb-4">Hiệu trưởng nhà trường cho biết: "Chúng tôi mong muốn tạo ra một môi trường học tập sáng tạo, khuyến khích học sinh không chỉ học tốt lý thuyết mà còn biết vận dụng kiến thức vào thực tiễn, góp phần phát triển đất nước."</p>
+              </div>
+              
+              <!-- Tags -->
+              <div class="mt-8 pt-6 border-t border-gray-200">
+                <span class="font-medium text-gray-700 mr-3">Tags:</span>
+                <a href="#" class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-200">#Khoa học</a>
+                <a href="#" class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-200">#Kỹ thuật</a>
+                <a href="#" class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-200">#Sáng tạo</a>
+                <a href="#" class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-200">#Học sinh</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Related News -->
+          <div class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tin tức liên quan</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img src="img/news1.jpg" alt="Lễ tổng kết năm học 2024-2025" class="w-full h-40 object-cover">
+                <div class="p-5">
+                  <div class="news-meta mb-2">
+                    <span><i class="far fa-calendar-alt"></i> 15/06/2025</span>
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Lễ tổng kết năm học 2024-2025</h3>
+                  <a href="le-tong-ket-nam-hoc-2024-2025.html" class="text-blue-600 font-medium text-sm hover:text-blue-700">Đọc tiếp <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+              
+              <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img src="img/news2.jpg" alt="Hội thao truyền thống lần thứ 25" class="w-full h-40 object-cover">
+                <div class="p-5">
+                  <div class="news-meta mb-2">
+                    <span><i class="far fa-calendar-alt"></i> 10/06/2025</span>
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Hội thao truyền thống lần thứ 25</h3>
+                  <a href="hoi-thao-truyen-thong-lan-thu-25.html" class="text-blue-600 font-medium text-sm hover:text-blue-700">Đọc tiếp <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="lg:w-1/3">
+          <!-- Categories -->
+          <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Danh mục tin tức</h3>
+            <ul class="space-y-3">
+              <li><a href="#" class="flex justify-between text-gray-600 hover:text-blue-600"><span>Sự kiện</span> <span class="bg-gray-100 px-2 py-1 rounded-full text-xs">12</span></a></li>
+              <li><a href="#" class="flex justify-between text-gray-600 hover:text-blue-600"><span>Tuyển sinh</span> <span class="bg-gray-100 px-2 py-1 rounded-full text-xs">8</span></a></li>
+              <li><a href="#" class="flex justify-between text-gray-600 hover:text-blue-600"><span>Hoạt động ngoại khóa</span> <span class="bg-gray-100 px-2 py-1 rounded-full text-xs">15</span></a></li>
+              <li><a href="#" class="flex justify-between text-gray-600 hover:text-blue-600"><span>Thành tích học sinh</span> <span class="bg-gray-100 px-2 py-1 rounded-full text-xs">7</span></a></li>
+              <li><a href="#" class="flex justify-between text-gray-600 hover:text-blue-600"><span>Đổi mới giáo dục</span> <span class="bg-gray-100 px-2 py-1 rounded-full text-xs">5</span></a></li>
+            </ul>
+          </div>
+          
+          <!-- Popular News -->
+          <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Tin đọc nhiều</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <img src="img/ra.jpg" alt="Khai giảng năm học mới" class="w-16 h-16 object-cover rounded-lg">
+                <div class="ml-3">
+                  <h4 class="font-bold text-gray-800 text-sm">Khai giảng năm học mới 2025-2026</h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <span><i class="far fa-calendar-alt mr-1"></i> 05/09/2025</span>
+                    <span class="mx-1">|</span>
+                    <span><i class="far fa-eye mr-1"></i> 3.2k</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <img src="img/news1.jpg" alt="Lễ tổng kết năm học" class="w-16 h-16 object-cover rounded-lg">
+                <div class="ml-3">
+                  <h4 class="font-bold text-gray-800 text-sm">Lễ tổng kết năm học 2024-2025</h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <span><i class="far fa-calendar-alt mr-1"></i> 15/06/2025</span>
+                    <span class="mx-1">|</span>
+                    <span><i class="far fa-eye mr-1"></i> 1.2k</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <img src="img/nice.jpg" alt="Đoàn thanh tra Bộ GD&ĐT" class="w-16 h-16 object-cover rounded-lg">
+                <div class="ml-3">
+                  <h4 class="font-bold text-gray-800 text-sm">Đoàn thanh tra Bộ GD&ĐT thăm trường</h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <span><i class="far fa-calendar-alt mr-1"></i> 15/04/2025</span>
+                    <span class="mx-1">|</span>
+                    <span><i class="far fa-eye mr-1"></i> 1.8k</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Newsletter -->
+          <div class="bg-blue-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Nhận tin tức mới</h3>
+            <p class="text-gray-600 mb-4">Đăng ký để nhận thông báo về tin tức và sự kiện mới nhất từ nhà trường.</p>
+            <form class="flex">
+              <input type="email" placeholder="Email của bạn" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+              <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg text-white" aria-label="Đăng ký nhận tin"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-90 transition-opacity">
+            <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+            <span class="text-xl font-bold">THPT Ông Ích Khiêm</span>
+          </a>
+          <p class="text-gray-400 mb-4">Trường THPT công lập chất lượng cao tại Đà Nẵng với hơn 40 năm kinh nghiệm đào tạo.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Liên kết nhanh</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html" class="text-gray-400 hover:text-white">Giới thiệu</a></li>
+            <li><a href="tin-tuc.html" class="text-gray-400 hover:text-white">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-gray-400 hover:text-white">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-400 hover:text-white">Liên hệ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Thông tin liên hệ</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-map-marker-alt mt-1"></i>
+              <span>123 Đường Lê Duẩn, Quận Hải Châu, TP. Đà Nẵng</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-phone-alt mt-1"></i>
+              <span>0236 3821 123</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-envelope mt-1"></i>
+              <span>contact@oik.edu.vn</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Đăng ký nhận tin</h4>
+          <p class="text-gray-400 mb-4">Nhận thông báo mới nhất từ trường qua email của bạn.</p>
+          <form class="flex">
+            <input type="email" placeholder="Email của bạn" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg" aria-label="Gửi tin nhắn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 THPT Ông Ích Khiêm. All rights reserved.</p>
+        <p><strong>Author</strong>: <a href="https://www.dungdo.site" target="_blank" class="text-gray-400 hover:text-white">https://www.dungdo.site</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hướng dẫn sử dụng tính năng chatbox AI trên website trường THPT Ông Ích Khiêm">
+  <title>Hướng dẫn Chatbox - THPT Ông Ích Khiêm</title>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap"></noscript>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="chatbox-guide.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="overflow-x-hidden font-sans">
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2 hover:opacity-90 transition-opacity">
+        <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+        <span class="text-xl font-bold text-blue-600">THPT Ông Ích Khiêm</span>
+      </a>
+
+      <div data-menu-desktop-wrapper>
+        <!-- Desktop Menu -->
+        <nav data-menu-desktop class="hidden md:block">
+          <ul class="flex items-center space-x-8">
+            <li class="relative group">
+              <a href="gioi-thieu.html" class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 transition-colors">
+                Giới thiệu <i class="fas fa-chevron-down text-xs mt-1"></i>
+              </a>
+              <ul class="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md py-2 hidden group-hover:block">
+                <li><a href="gioi-thieu.html#history" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Lịch sử</a></li>
+                <li><a href="gioi-thieu.html#principal" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Ban giám hiệu</a></li>
+                <li><a href="gioi-thieu.html#facilities" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Cơ sở vật chất</a></li>
+              </ul>
+            </li>
+            <li><a href="tin-tuc.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Liên hệ</a></li>
+            <li><a href="huong-dan-chatbox.html" class="text-blue-600 font-medium transition-colors">Hướng dẫn</a></li>
+          </ul>
+        </nav>
+
+        <button data-menu-toggle class="md:hidden text-gray-700" aria-label="Mở menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div data-menu-mobile class="hidden md:hidden bg-white border-t py-4 px-4">
+      <ul class="space-y-4">
+        <li>
+          <button data-menu-submenu class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-blue-600" aria-label="Mở submenu">
+            Giới thiệu <i class="fas fa-chevron-down text-xs"></i>
+          </button>
+          <ul class="hidden pl-4 space-y-2 mt-2">
+            <li><a href="gioi-thieu.html#history" class="block py-2 text-gray-700 hover:text-blue-600">Lịch sử</a></li>
+            <li><a href="gioi-thieu.html#principal" class="block py-2 text-gray-700 hover:text-blue-600">Ban giám hiệu</a></li>
+            <li><a href="gioi-thieu.html#facilities" class="block py-2 text-gray-700 hover:text-blue-600">Cơ sở vật chất</a></li>
+          </ul>
+        </li>
+        <li><a href="tin-tuc.html" class="block py-2 text-gray-700 hover:text-blue-600">Tin tức</a></li>
+        <li><a href="tuyen-sinh.html" class="block py-2 text-gray-700 hover:text-blue-600">Tuyển sinh</a></li>
+        <li><a href="index.html#contact" class="block py-2 text-gray-700 hover:text-blue-600">Liên hệ</a></li>
+        <li><a href="huong-dan-chatbox.html" class="block py-2 text-blue-600 font-medium">Hướng dẫn</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Hướng dẫn sử dụng Chatbox AI</h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Tìm hiểu cách sử dụng trợ lý AI của trường THPT Ông Ích Khiêm để nhận hỗ trợ thông tin nhanh chóng
+        </p>
+      </div>
+
+      <!-- Chatbox Preview -->
+      <div class="chatbox-preview">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Trải nghiệm mẫu</h2>
+        <div class="flex flex-col">
+          <div class="chat-message bot-message-preview">
+            Xin chào! Tôi là trợ lý AI của trường THPT Ông Ích Khiêm. Tôi có thể giúp gì cho bạn hôm nay?
+          </div>
+          <div class="chat-message user-message-preview">
+            Thông tin tuyển sinh năm 2025?
+          </div>
+          <div class="chat-message bot-message-preview">
+            Trường THPT Ông Ích Khiêm hiện đang tuyển sinh cho năm học 2025. Bạn có thể tìm hiểu thêm thông tin tại trang Tuyển sinh hoặc liên hệ trực tiếp với chúng tôi để được tư vấn chi tiết.
+          </div>
+        </div>
+      </div>
+
+      <!-- How to Use -->
+      <section class="faq-section mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Cách sử dụng chatbox</h2>
+        
+        <div class="space-y-8">
+          <div class="flex items-start">
+            <div class="step-number">1</div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Mở chatbox</h3>
+              <p class="text-gray-600">
+                Nhấn vào nút <i class="fas fa-comment"></i> ở góc dưới bên phải màn hình để mở cửa sổ chatbox.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="step-number">2</div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Gõ câu hỏi của bạn</h3>
+              <p class="text-gray-600">
+                Nhập câu hỏi của bạn vào ô nhập liệu ở phía dưới cửa sổ chatbox.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="step-number">3</div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Gửi tin nhắn</h3>
+              <p class="text-gray-600">
+                Nhấn nút <i class="fas fa-paper-plane"></i> hoặc phím Enter để gửi tin nhắn.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="step-number">4</div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Nhận phản hồi</h3>
+              <p class="text-gray-600">
+                Trợ lý AI sẽ phản hồi câu hỏi của bạn trong vòng vài giây.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="step-number">5</div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Đóng chatbox</h3>
+              <p class="text-gray-600">
+                Nhấn vào nút <span class="font-bold">&times;</span> ở góc trên bên phải để đóng chatbox.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="faq-section mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Tính năng của chatbox</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="feature-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Thông tin tuyển sinh</h3>
+            <p class="text-gray-600">
+              Nhận thông tin chi tiết về chỉ tiêu tuyển sinh, điều kiện nhập học, và quy trình đăng ký.
+            </p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="feature-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Chương trình học</h3>
+            <p class="text-gray-600">
+              Tìm hiểu về các chương trình học, phương pháp giảng dạy và hoạt động ngoại khóa.
+            </p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="feature-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Sự kiện & Hoạt động</h3>
+            <p class="text-gray-600">
+              Cập nhật thông tin về các sự kiện sắp diễn ra và hoạt động của nhà trường.
+            </p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="feature-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Liên hệ hỗ trợ</h3>
+            <p class="text-gray-600">
+              Nhận thông tin liên hệ và hướng dẫn hỗ trợ khi cần trợ giúp.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common Questions -->
+      <section class="faq-section mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Các câu hỏi thường gặp</h2>
+        
+        <div class="space-y-6">
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Tôi có thể hỏi những gì?</h3>
+            <p class="text-gray-600">
+              Bạn có thể hỏi về tuyển sinh, chương trình học, hoạt động ngoại khóa, cơ sở vật chất, và bất kỳ thông tin nào liên quan đến trường THPT Ông Ích Khiêm.
+            </p>
+          </div>
+          
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Chatbox có hiểu tiếng Việt không?</h3>
+            <p class="text-gray-600">
+              Có, chatbox được thiết kế để hiểu và trả lời bằng tiếng Việt. Bạn có thể đặt câu hỏi bằng ngôn ngữ tự nhiên.
+            </p>
+          </div>
+          
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Thông tin chatbox cung cấp có chính xác không?</h3>
+            <p class="text-gray-600">
+              Chatbox cung cấp thông tin dựa trên cơ sở dữ liệu của trường. Tuy nhiên, để có thông tin chính xác và cập nhật nhất, bạn nên kiểm tra lại trên website chính thức hoặc liên hệ trực tiếp với trường.
+            </p>
+          </div>
+          
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Chatbox có lưu trữ cuộc trò chuyện không?</h3>
+            <p class="text-gray-600">
+              Không, chatbox không lưu trữ bất kỳ thông tin cuộc trò chuyện nào. Mỗi phiên chat mới sẽ bắt đầu với tin nhắn chào mừng mặc định.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips -->
+      <section class="faq-section mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Mẹo sử dụng hiệu quả</h2>
+        
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-gray-800 mb-3">Để có kết quả tốt nhất:</h3>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            <li>Sử dụng ngôn ngữ rõ ràng, dễ hiểu</li>
+            <li>Đặt câu hỏi cụ thể thay vì chung chung</li>
+            <li>Kiểm tra lại thông tin quan trọng trên các kênh chính thức của trường</li>
+            <li>Không chia sẻ thông tin cá nhân nhạy cảm trong chatbox</li>
+            <li>Đóng chatbox khi không sử dụng để tiết kiệm tài nguyên</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Support -->
+      <section class="faq-section">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Cần hỗ trợ thêm?</h2>
+        
+        <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+          <div class="feature-icon mx-auto">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Liên hệ hỗ trợ kỹ thuật</h3>
+          <p class="text-gray-600 mb-6">
+            Nếu bạn gặp sự cố khi sử dụng chatbox hoặc cần hỗ trợ thêm, vui lòng liên hệ với bộ phận hỗ trợ kỹ thuật của trường.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="index.html#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+              <i class="fas fa-envelope mr-2"></i> Gửi email
+            </a>
+            <a href="tel:02363821123" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-colors">
+              <i class="fas fa-phone mr-2"></i> Gọi điện
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-90 transition-opacity">
+            <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+            <span class="text-xl font-bold">THPT Ông Ích Khiêm</span>
+          </a>
+          <p class="text-gray-400 mb-4">Trường THPT công lập chất lượng cao tại Đà Nẵng với hơn 40 năm kinh nghiệm đào tạo.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Liên kết nhanh</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html" class="text-gray-400 hover:text-white">Giới thiệu</a></li>
+            <li><a href="tin-tuc.html" class="text-gray-400 hover:text-white">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-gray-400 hover:text-white">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-400 hover:text-white">Liên hệ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Thông tin liên hệ</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-map-marker-alt mt-1"></i>
+              <span>123 Đường Lê Duẩn, Quận Hải Châu, TP. Đà Nẵng</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-phone-alt mt-1"></i>
+              <span>0236 3821 123</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-envelope mt-1"></i>
+              <span>contact@oik.edu.vn</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Đăng ký nhận tin</h4>
+          <p class="text-gray-400 mb-4">Nhận thông báo mới nhất từ trường qua email của bạn.</p>
+          <form class="flex">
+            <input type="email" placeholder="Email của bạn" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg" aria-label="Gửi tin nhắn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 THPT Ông Ích Khiêm. All rights reserved.</p>
+        <p><strong>Author</strong>: <a href="https://www.dungdo.site" target="_blank" class="text-gray-400 hover:text-white">https://www.dungdo.site</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

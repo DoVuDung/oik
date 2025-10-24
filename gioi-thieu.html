@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tìm hiểu về Trường THPT Ông Ích Khiêm - Lịch sử hình thành, ban giám hiệu, cơ sở vật chất, và thành tựu nổi bật của nhà trường.">
+  <title>Giới thiệu - THPT Ông Ích Khiêm</title>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap"></noscript>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="font-sans">
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2 hover:opacity-90 transition-opacity">
+        <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+        <span class="text-xl font-bold text-blue-600">THPT Ông Ích Khiêm</span>
+      </a>
+
+      <div data-menu-desktop-wrapper="">
+        <!-- Desktop Menu -->
+        <nav data-menu-desktop="" class="hidden md:block">
+          <ul class="flex items-center space-x-8">
+            <li class="relative group">
+              <a href="gioi-thieu.html" class="text-blue-600 font-medium flex items-center gap-1 transition-colors">
+                Giới thiệu <i class="fas fa-chevron-down text-xs mt-1"></i>
+              </a>
+              <ul class="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md py-2 hidden group-hover:block">
+                <li><a href="#history" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Lịch sử</a></li>
+                <li><a href="#principal" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Ban giám hiệu</a></li>
+                <li><a href="#facilities" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Cơ sở vật chất</a></li>
+              </ul>
+            </li>
+            <li><a href="tin-tuc.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Liên hệ</a></li>
+            <li><a href="huong-dan-chatbox.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Hướng dẫn</a></li>
+            <li><a href="#" id="loginLink" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Đăng nhập</a></li>
+            <li><a href="#" id="signupLink" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium transition-colors">Đăng ký</a></li>
+          </ul>
+        </nav>
+
+        <button data-menu-toggle="" class="md:hidden text-gray-700">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div data-menu-mobile="" class="hidden md:hidden bg-white border-t py-4 px-4">
+      <ul class="space-y-4">
+        <li>
+          <button data-menu-submenu="" class="w-full flex justify-between items-center py-2 text-blue-600 font-medium">
+            Giới thiệu <i class="fas fa-chevron-down text-xs rotate-180"></i>
+          </button>
+          <ul class="pl-4 space-y-2 mt-2">
+            <li><a href="#history" class="block py-2 text-gray-700 hover:text-blue-600">Lịch sử</a></li>
+            <li><a href="#principal" class="block py-2 text-gray-700 hover:text-blue-600">Ban giám hiệu</a></li>
+            <li><a href="#facilities" class="block py-2 text-gray-700 hover:text-blue-600">Cơ sở vật chất</a></li>
+          </ul>
+        </li>
+        <li><a href="tin-tuc.html" class="block py-2 text-gray-700 hover:text-blue-600">Tin tức</a></li>
+        <li><a href="tuyen-sinh.html" class="block py-2 text-gray-700 hover:text-blue-600">Tuyển sinh</a></li>
+        <li><a href="index.html#contact" class="block py-2 text-gray-700 hover:text-blue-600">Liên hệ</a></li>
+        <li><a href="huong-dan-chatbox.html" class="block py-2 text-gray-700 hover:text-blue-600">Hướng dẫn</a></li>
+        <li><a href="#" id="mobileLoginLink" class="block py-2 text-gray-700 hover:text-blue-600">Đăng nhập</a></li>
+        <li>
+          <a href="#" id="mobileSignupLink" class="block bg-blue-600 text-white px-4 py-2 rounded-full text-center font-medium hover:bg-blue-700">Đăng ký</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[500px] flex items-center">
+    <img src="img/OKI.jpg" alt="school building" width="1920" height="600" class="absolute inset-0 w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="container mx-auto px-4 relative z-10 text-white max-w-4xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">Giới thiệu về trường</h1>
+      <p class="text-xl mb-8">THPT Ông Ích Khiêm - Trường trung học phổ thông công lập chất lượng cao tại Đà Nẵng với hơn 40 năm kinh nghiệm đào tạo.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#overview" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition-colors">Tìm hiểu thêm</a>
+        <a href="#contact" class="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-medium transition-colors">Liên hệ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- School Overview -->
+  <section id="overview" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Tổng quan về trường</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">Trường THPT Ông Ích Khiêm tự hào là một trong những trường trung học phổ thông hàng đầu tại Đà Nẵng với truyền thống lâu đời và chất lượng giáo dục vượt trội.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">Sứ mệnh & Giá trị cốt lõi</h3>
+          <p class="text-gray-600 mb-6">Trường THPT Ông Ích Khiêm cam kết cung cấp nền giáo dục toàn diện, phát triển cả về trí tuệ, thể chất, đạo đức và kỹ năng sống cho học sinh.</p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <div>
+                <h4 class="font-bold text-gray-800">Phát triển toàn diện</h4>
+                <p class="text-gray-600">Chú trọng phát triển cả về học thuật, kỹ năng sống và giá trị đạo đức.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <div>
+                <h4 class="font-bold text-gray-800">Đổi mới sáng tạo</h4>
+                <p class="text-gray-600">Ứng dụng công nghệ và phương pháp giảng dạy hiện đại trong quá trình học tập.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <div>
+                <h4 class="font-bold text-gray-800">Nhân văn - Chính trực</h4>
+                <p class="text-gray-600">Nuôi dưỡng học sinh trở thành công dân có ích cho xã hội.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <img src="img/thi.jpg" alt="Học sinh đang học" width="600" height="400" class="rounded-lg shadow-lg w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Timeline -->
+  <section id="history" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Lịch sử hình thành và phát triển</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">Hành trình phát triển của trường THPT Ông Ích Khiêm qua nhiều giai đoạn lịch sử.</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="history-timeline">
+          <div class="timeline-item">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Năm 1980</h3>
+              <p class="text-gray-600">Trường THPT Ông Ích Khiêm được thành lập với tên gọi ban đầu là Trường Trung học Tổng hợp Quận Hải Châu.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Năm 1985</h3>
+              <p class="text-gray-600">Đổi tên thành Trường THPT Ông Ích Khiêm để vinh danh ông Ông Ích Khiêm - một trong những danh nhân văn hóa tiêu biểu của Việt Nam.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Năm 1995</h3>
+              <p class="text-gray-600">Chuyển đến cơ sở mới tại số 123 Đường Lê Duẩn, Quận Hải Châu, TP. Đà Nẵng với cơ sở vật chất hiện đại hơn.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Năm 2005</h3>
+              <p class="text-gray-600">Đạt danh hiệu Trường chuẩn quốc gia và bắt đầu áp dụng chương trình giáo dục tiên tiến.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Năm 2015</h3>
+              <p class="text-gray-600">Trở thành một trong những trường THPT công lập đầu tiên tại Đà Nẵng ứng dụng công nghệ thông tin trong giảng dạy.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Năm 2025</h3>
+              <p class="text-gray-600">Tiếp tục khẳng định vị thế là trường THPT chất lượng cao với tỷ lệ học sinh đỗ tốt nghiệp và đại học luôn đạt tỷ lệ cao.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principal Section -->
+  <section id="principal" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ban giám hiệu</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">Đội ngũ lãnh đạo tận tụy, giàu kinh nghiệm và tâm huyết với sự nghiệp giáo dục.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Principal Card 1 -->
+        <div class="principal-card bg-white p-8 rounded-xl shadow-sm text-center">
+          <div class="mx-auto mb-6">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 mx-auto"></div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Ông Nguyễn Văn A</h3>
+          <p class="text-blue-600 font-medium mb-4">Hiệu trưởng</p>
+          <p class="text-gray-600">Thạc sĩ Quản lý Giáo dục, hơn 20 năm kinh nghiệm trong lĩnh vực giáo dục phổ thông.</p>
+        </div>
+        
+        <!-- Principal Card 2 -->
+        <div class="principal-card bg-white p-8 rounded-xl shadow-sm text-center">
+          <div class="mx-auto mb-6">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 mx-auto"></div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Bà Trần Thị B</h3>
+          <p class="text-blue-600 font-medium mb-4">Phó Hiệu trưởng</p>
+          <p class="text-gray-600">Thạc sĩ Toán học, chuyên gia về đổi mới phương pháp giảng dạy môn Toán.</p>
+        </div>
+        
+        <!-- Principal Card 3 -->
+        <div class="principal-card bg-white p-8 rounded-xl shadow-sm text-center">
+          <div class="mx-auto mb-6">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 mx-auto"></div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Ông Lê Văn C</h3>
+          <p class="text-blue-600 font-medium mb-4">Phó Hiệu trưởng</p>
+          <p class="text-gray-600">Thạc sĩ Công nghệ Thông tin, phụ trách công tác đổi mới sáng tạo và ứng dụng công nghệ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Cơ sở vật chất</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">Hệ thống cơ sở vật chất hiện đại, phục vụ tối đa cho việc giảng dạy và học tập.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Facility Card 1 -->
+        <div class="facility-card bg-gray-50 rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gray-200 border-2 border-dashed"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Phòng học tiêu chuẩn</h3>
+            <p class="text-gray-600">30 phòng học được trang bị đầy đủ tiện nghi, máy chiếu, máy lạnh và hệ thống âm thanh hiện đại.</p>
+          </div>
+        </div>
+        
+        <!-- Facility Card 2 -->
+        <div class="facility-card bg-gray-50 rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gray-200 border-2 border-dashed"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Phòng thí nghiệm</h3>
+            <p class="text-gray-600">Phòng thí nghiệm Vật lý, Hóa học, Sinh học được trang bị đầy đủ dụng cụ và thiết bị hiện đại.</p>
+          </div>
+        </div>
+        
+        <!-- Facility Card 3 -->
+        <div class="facility-card bg-gray-50 rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gray-200 border-2 border-dashed"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Thư viện</h3>
+            <p class="text-gray-600">Thư viện với hơn 10.000 đầu sách, tạp chí và tài liệu tham khảo phục vụ học tập và nghiên cứu.</p>
+          </div>
+        </div>
+        
+        <!-- Facility Card 4 -->
+        <div class="facility-card bg-gray-50 rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gray-200 border-2 border-dashed"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Sân vận động</h3>
+            <p class="text-gray-600">Sân vận động đa năng với đầy đủ trang thiết bị phục vụ cho các môn thể thao và hoạt động ngoại khóa.</p>
+          </div>
+        </div>
+        
+        <!-- Facility Card 5 -->
+        <div class="facility-card bg-gray-50 rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gray-200 border-2 border-dashed"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Hội trường</h3>
+            <p class="text-gray-600">Hội trường đa năng với sức chứa 500 người, được trang bị hệ thống âm thanh ánh sáng hiện đại.</p>
+          </div>
+        </div>
+        
+        <!-- Facility Card 6 -->
+        <div class="facility-card bg-gray-50 rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gray-200 border-2 border-dashed"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Ký túc xá</h3>
+            <p class="text-gray-600">Ký túc xá với sức chứa 200 chỗ, được trang bị đầy đủ tiện nghi phục vụ học sinh ở xa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Thành tựu nổi bật</h2>
+        <p class="text-blue-50 max-w-3xl mx-auto text-lg">Những thành tích đáng tự hào mà nhà trường đã đạt được trong quá trình phát triển.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-white text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-award text-3xl"></i>
+          </div>
+          <div class="text-3xl font-bold mb-2">40+</div>
+          <p class="text-blue-50">Năm kinh nghiệm</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-white text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-graduation-cap text-3xl"></i>
+          </div>
+          <div class="text-3xl font-bold mb-2">98%</div>
+          <p class="text-blue-50">Tỷ lệ tốt nghiệp</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-white text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-university text-3xl"></i>
+          </div>
+          <div class="text-3xl font-bold mb-2">85%</div>
+          <p class="text-blue-50">Đỗ đại học</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-white text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-3xl"></i>
+          </div>
+          <div class="text-3xl font-bold mb-2">300+</div>
+          <p class="text-blue-50">Học sinh mỗi năm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Liên hệ với chúng tôi</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Mọi thắc mắc về trường, vui lòng liên hệ với chúng tôi qua các kênh dưới đây:</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Điện thoại</h3>
+          <p class="text-gray-600">0236 3821 123</p>
+          <p class="text-gray-600">0236 3821 456</p>
+          <p class="text-sm text-gray-500 mt-2">Thời gian: 7:30 - 17:00</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-envelope text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Email</h3>
+          <p class="text-gray-600">contact@oik.edu.vn</p>
+          <p class="text-gray-600">info@oik.edu.vn</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Trực tiếp</h3>
+          <p class="text-gray-600">123 Đường Lê Duẩn</p>
+          <p class="text-gray-600">Quận Hải Châu, TP. Đà Nẵng</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-90 transition-opacity">
+            <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+            <span class="text-xl font-bold">THPT Ông Ích Khiêm</span>
+          </a>
+          <p class="text-gray-400 mb-4">Trường THPT công lập chất lượng cao tại Đà Nẵng với hơn 40 năm kinh nghiệm đào tạo.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Liên kết nhanh</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html" class="text-gray-400 hover:text-white">Giới thiệu</a></li>
+            <li><a href="tin-tuc.html" class="text-gray-400 hover:text-white">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-gray-400 hover:text-white">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-400 hover:text-white">Liên hệ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Thông tin liên hệ</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-map-marker-alt mt-1"></i>
+              <span>123 Đường Lê Duẩn, Quận Hải Châu, TP. Đà Nẵng</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-phone-alt mt-1"></i>
+              <span>0236 3821 123</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-envelope mt-1"></i>
+              <span>contact@oik.edu.vn</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Đăng ký nhận tin</h4>
+          <p class="text-gray-400 mb-4">Nhận thông báo mới nhất từ trường qua email của bạn.</p>
+          <form class="flex">
+            <input type="email" placeholder="Email của bạn" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg" aria-label="Gửi tin nhắn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 THPT Ông Ích Khiêm. All rights reserved.</p>
+        <p><strong>Author</strong>: <a href="https://www.dungdo.site" target="_blank" class="text-gray-400 hover:text-white">https://www.dungdo.site</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Navigation Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('[data-menu-toggle]');
+      const mobileMenu = document.querySelector('[data-menu-mobile]');
+      
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Submenu toggle for mobile
+      const submenuToggles = document.querySelectorAll('[data-menu-submenu]');
+      submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const submenu = toggle.nextElementSibling;
+          const icon = toggle.querySelector('i');
+          submenu.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thông tin tuyển sinh năm học 2025-2026 của Trường THPT Ông Ích Khiêm. Tìm hiểu về chỉ tiêu tuyển sinh, điều kiện nhập học, và quy trình đăng ký.">
+  <title>Tuyển sinh - THPT Ông Ích Khiêm</title>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap"></noscript>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="font-sans">
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2 hover:opacity-90 transition-opacity">
+        <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+        <span class="text-xl font-bold text-blue-600">THPT Ông Ích Khiêm</span>
+      </a>
+
+      <div data-menu-desktop-wrapper="">
+        <!-- Desktop Menu -->
+        <nav data-menu-desktop="" class="hidden md:block">
+          <ul class="flex items-center space-x-8">
+            <li class="relative group">
+              <a href="gioi-thieu.html" class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 transition-colors">
+                Giới thiệu <i class="fas fa-chevron-down text-xs mt-1"></i>
+              </a>
+              <ul class="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md py-2 hidden group-hover:block">
+                <li><a href="gioi-thieu.html#history" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Lịch sử</a></li>
+                <li><a href="gioi-thieu.html#principal" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Ban giám hiệu</a></li>
+                <li><a href="gioi-thieu.html#facilities" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Cơ sở vật chất</a></li>
+              </ul>
+            </li>
+            <li><a href="tin-tuc.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-blue-600 font-medium transition-colors">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Liên hệ</a></li>
+            <li><a href="huong-dan-chatbox.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Hướng dẫn</a></li>
+            <li><a href="#" id="loginLink" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Đăng nhập</a></li>
+            <li><a href="#" id="signupLink" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium transition-colors">Đăng ký</a></li>
+          </ul>
+        </nav>
+
+        <button data-menu-toggle="" class="md:hidden text-gray-700">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div data-menu-mobile="" class="hidden md:hidden bg-white border-t py-4 px-4">
+      <ul class="space-y-4">
+        <li>
+          <button data-menu-submenu="" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-blue-600">
+            Giới thiệu <i class="fas fa-chevron-down text-xs"></i>
+          </button>
+          <ul class="hidden pl-4 space-y-2 mt-2">
+            <li><a href="gioi-thieu.html#history" class="block py-2 text-gray-700 hover:text-blue-600">Lịch sử</a></li>
+            <li><a href="gioi-thieu.html#principal" class="block py-2 text-gray-700 hover:text-blue-600">Ban giám hiệu</a></li>
+            <li><a href="gioi-thieu.html#facilities" class="block py-2 text-gray-700 hover:text-blue-600">Cơ sở vật chất</a></li>
+          </ul>
+        </li>
+        <li><a href="tin-tuc.html" class="block py-2 text-gray-700 hover:text-blue-600">Tin tức</a></li>
+        <li><a href="tuyen-sinh.html" class="block py-2 text-blue-600 font-medium">Tuyển sinh</a></li>
+        <li><a href="index.html#contact" class="block py-2 text-gray-700 hover:text-blue-600">Liên hệ</a></li>
+        <li><a href="huong-dan-chatbox.html" class="block py-2 text-gray-700 hover:text-blue-600">Hướng dẫn</a></li>
+        <li><a href="#" id="mobileLoginLink" class="block py-2 text-gray-700 hover:text-blue-600">Đăng nhập</a></li>
+        <li>
+          <a href="#" id="mobileSignupLink" class="block bg-blue-600 text-white px-4 py-2 rounded-full text-center font-medium hover:bg-blue-700">Đăng ký</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[500px] flex items-center">
+    <img src="img/OKI.jpg" alt="school building" width="1920" height="600" class="absolute inset-0 w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="container mx-auto px-4 relative z-10 text-white max-w-4xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">Tuyển sinh năm học 2025-2026</h1>
+      <p class="text-xl mb-8">Trở thành học sinh của trường THPT Ông Ích Khiêm với nhiều chính sách ưu đãi và học bổng hấp dẫn.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#register" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition-colors">Đăng ký trực tuyến</a>
+        <a href="#process" class="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-medium transition-colors">Xem quy trình</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Overview -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Thông tin tuyển sinh</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">Trường THPT Ông Ích Khiêm tuyển sinh học sinh lớp 10 với nhiều chính sách ưu đãi và học bổng hấp dẫn.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Admission Card 1 -->
+        <div class="admission-card bg-white p-8 rounded-xl shadow-sm">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-calendar-alt text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Thời gian tuyển sinh</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Bắt đầu nhận hồ sơ: 01/05/2025</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Kết thúc nhận hồ sơ: 15/07/2025</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Thi tuyển (nếu có): 20/07/2025</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Công bố kết quả: 30/07/2025</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Admission Card 2 -->
+        <div class="admission-card bg-white p-8 rounded-xl shadow-sm">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-file-alt text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Hồ sơ cần nộp</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Đơn đăng ký nhập học</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Bản sao học bạ THCS</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Giấy khai sinh</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Giấy chứng nhận tốt nghiệp THCS</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Ảnh 3x4 (04 tờ)</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Admission Card 3 -->
+        <div class="admission-card bg-white p-8 rounded-xl shadow-sm">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Chỉ tiêu & Học bổng</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Chỉ tiêu tuyển sinh: 300 học sinh</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Học bổng khuyến học: 20%</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Học bổng học sinh giỏi: 10%</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Hỗ trợ học sinh khó khăn: 5%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Process -->
+  <section id="process" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Quy trình tuyển sinh</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">Quy trình tuyển sinh của trường THPT Ông Ích Khiêm được thực hiện minh bạch và công bằng.</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="process-step" data-step="1">
+          <h3 class="text-xl font-bold mb-2">Nộp hồ sơ</h3>
+          <p class="text-gray-600">Thí sinh nộp hồ sơ trực tiếp tại trường hoặc qua hệ thống đăng ký trực tuyến. Hồ sơ bao gồm các giấy tờ theo quy định.</p>
+        </div>
+        
+        <div class="process-step" data-step="2">
+          <h3 class="text-xl font-bold mb-2">Kiểm tra hồ sơ</h3>
+          <p class="text-gray-600">Ban tuyển sinh kiểm tra tính hợp lệ của hồ sơ và thông báo kết quả kiểm tra trong vòng 3 ngày làm việc.</p>
+        </div>
+        
+        <div class="process-step" data-step="3">
+          <h3 class="text-xl font-bold mb-2">Thi tuyển (nếu có)</h3>
+          <p class="text-gray-600">Thí sinh tham gia kỳ thi tuyển (nếu có yêu cầu) theo lịch trình đã công bố. Kết quả thi sẽ được công bố trong vòng 5 ngày.</p>
+        </div>
+        
+        <div class="process-step" data-step="4">
+          <h3 class="text-xl font-bold mb-2">Xét tuyển</h3>
+          <p class="text-gray-600">Ban tuyển sinh xét tuyển dựa trên kết quả học tập, hồ sơ và kết quả thi (nếu có) theo tiêu chí đã công bố.</p>
+        </div>
+        
+        <div class="process-step" data-step="5">
+          <h3 class="text-xl font-bold mb-2">Công bố kết quả</h3>
+          <p class="text-gray-600">Kết quả tuyển sinh được công bố công khai trên website của trường và thông báo trực tiếp đến thí sinh.</p>
+        </div>
+        
+        <div class="process-step" data-step="6">
+          <h3 class="text-xl font-bold mb-2">Nhập học</h3>
+          <p class="text-gray-600">Thí sinh trúng tuyển hoàn thành thủ tục nhập học theo hướng dẫn và bắt đầu năm học mới tại trường.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register" class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Đăng ký tuyển sinh</h2>
+          <p class="text-blue-50 max-w-2xl mx-auto text-lg">Đăng ký trực tuyến để trở thành học sinh của trường THPT Ông Ích Khiêm.</p>
+        </div>
+        
+        <div class="bg-white text-gray-800 rounded-xl shadow-lg p-8">
+          <form>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-gray-700 mb-2 font-medium">Họ và tên *</label>
+                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Nhập họ và tên">
+              </div>
+              
+              <div>
+                <label class="block text-gray-700 mb-2 font-medium">Ngày sinh *</label>
+                <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              
+              <div>
+                <label class="block text-gray-700 mb-2 font-medium">Email *</label>
+                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Nhập email">
+              </div>
+              
+              <div>
+                <label class="block text-gray-700 mb-2 font-medium">Số điện thoại *</label>
+                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Nhập số điện thoại">
+              </div>
+              
+              <div>
+                <label class="block text-gray-700 mb-2 font-medium">Trường THCS đã học *</label>
+                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Nhập tên trường">
+              </div>
+              
+              <div>
+                <label class="block text-gray-700 mb-2 font-medium">Điểm trung bình môn lớp 9 *</label>
+                <input type="number" step="0.1" min="0" max="10" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Nhập điểm trung bình">
+              </div>
+              
+              <div class="md:col-span-2">
+                <label class="block text-gray-700 mb-2 font-medium">Địa chỉ *</label>
+                <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Nhập địa chỉ đầy đủ"></textarea>
+              </div>
+              
+              <div class="md:col-span-2">
+                <label class="block text-gray-700 mb-2 font-medium">Ghi chú</label>
+                <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" rows="4" placeholder="Thông tin bổ sung (nếu có)"></textarea>
+              </div>
+            </div>
+            
+            <div class="mt-8">
+              <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold text-lg transition-colors">
+                Gửi hồ sơ đăng ký
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Liên hệ tuyển sinh</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Mọi thắc mắc về tuyển sinh, vui lòng liên hệ với chúng tôi qua các kênh dưới đây:</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Điện thoại</h3>
+          <p class="text-gray-600">0236 3821 123</p>
+          <p class="text-gray-600">0236 3821 456</p>
+          <p class="text-sm text-gray-500 mt-2">Thời gian: 7:30 - 17:00</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-envelope text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Email</h3>
+          <p class="text-gray-600">tuyensinh@oik.edu.vn</p>
+          <p class="text-gray-600">contact@oik.edu.vn</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Trực tiếp</h3>
+          <p class="text-gray-600">123 Đường Lê Duẩn</p>
+          <p class="text-gray-600">Quận Hải Châu, TP. Đà Nẵng</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-90 transition-opacity">
+            <img src="img/globe.svg" alt="school logo" class="w-10 h-10">
+            <span class="text-xl font-bold">THPT Ông Ích Khiêm</span>
+          </a>
+          <p class="text-gray-400 mb-4">Trường THPT công lập chất lượng cao tại Đà Nẵng với hơn 40 năm kinh nghiệm đào tạo.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Liên kết nhanh</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html" class="text-gray-400 hover:text-white">Giới thiệu</a></li>
+            <li><a href="tin-tuc.html" class="text-gray-400 hover:text-white">Tin tức</a></li>
+            <li><a href="tuyen-sinh.html" class="text-gray-400 hover:text-white">Tuyển sinh</a></li>
+            <li><a href="index.html#contact" class="text-gray-400 hover:text-white">Liên hệ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Thông tin liên hệ</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-map-marker-alt mt-1"></i>
+              <span>123 Đường Lê Duẩn, Quận Hải Châu, TP. Đà Nẵng</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-phone-alt mt-1"></i>
+              <span>0236 3821 123</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-envelope mt-1"></i>
+              <span>contact@oik.edu.vn</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">Đăng ký nhận tin</h4>
+          <p class="text-gray-400 mb-4">Nhận thông báo mới nhất từ trường qua email của bạn.</p>
+          <form class="flex">
+            <input type="email" placeholder="Email của bạn" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg" aria-label="Gửi tin nhắn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 THPT Ông Ích Khiêm. All rights reserved.</p>
+        <p><strong>Author</strong>: <a href="https://www.dungdo.site" target="_blank" class="text-gray-400 hover:text-white">https://www.dungdo.site</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Navigation Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('[data-menu-toggle]');
+      const mobileMenu = document.querySelector('[data-menu-mobile]');
+      
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Submenu toggle for mobile
+      const submenuToggles = document.querySelectorAll('[data-menu-submenu]');
+      submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const submenu = toggle.nextElementSibling;
+          const icon = toggle.querySelector('i');
+          submenu.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+        });
+      });
+      
+      // Form submission
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Hồ sơ đăng ký đã được gửi thành công! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

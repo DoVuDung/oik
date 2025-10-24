@@ -1,0 +1,63 @@
+/* Chatbox Preview Styles */
+.chatbox-preview {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Removed position: relative and z-index: 1 to prevent stacking context issues */
+}
+
+.chat-message {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  max-width: 80%;
+}
+
+.bot-message-preview {
+  background-color: #e9ecef;
+  align-self: flex-start;
+}
+
+.user-message-preview {
+  background-color: #4e54c8;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  /* No z-index needed for normal document flow */
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #4e54c8;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #4e54c8;
+  margin-bottom: 1rem;
+}
+
+.code-block {
+  background-color: #f1f3f5;
+  border-left: 4px solid #4e54c8;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+  font-family: monospace;
+  overflow-x: auto;
+}
