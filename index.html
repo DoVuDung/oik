@@ -14,6 +14,7 @@
   <script src="https://cdn.tailwindcss.com" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="https://unpkg.com/accordion-js@3.4.1/dist/accordion.min.js" defer></script>
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="assets/css/main.css">
@@ -84,15 +85,15 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative h-[600px] flex items-center" data-id="cagcf1ps">
+  <section class="hero-section" data-id="cagcf1ps">
     
-    <img src="img/OKI.jpg" alt="school building" width="1920" height="600" class="absolute inset-0 w-full h-full object-cover" data-id="a5ost4x2">
+    <img src="img/OKI.jpg" alt="school building" width="1920" height="600" class="hero-image" data-id="a5ost4x2">
 
-    <div class="hero-overlay absolute inset-0" data-id="3wyt9bop"></div>
-    <div class="container mx-auto px-4 relative z-10 text-white max-w-2xl" data-id="60aan9gs">
+    <div class="hero-overlay" data-id="3wyt9bop"></div>
+    <div class="container mx-auto px-4 hero-content" data-id="60aan9gs">
       <span class="text-sm font-medium tracking-wider uppercase mb-2 block" data-id="6n6bflll">OIK HIGH SCHOOL</span>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" data-id="iq4pao5n">Cùng nhau khám phá những điều mới mẻ</h1>
-      <p class="text-lg mb-8" data-id="02zjwep6">Môi trường học tập thân thiện, sáng tạo và định hướng phát triển toàn diện cho học sinh.</p>
+      <h1 class="hero-title" data-id="iq4pao5n">Cùng nhau khám phá những điều mới mẻ</h1>
+      <p class="hero-subtitle" data-id="02zjwep6">Môi trường học tập thân thiện, sáng tạo và định hướng phát triển toàn diện cho học sinh.</p>
       <div class="flex flex-wrap gap-4" data-id="pvrdffp7">
         <a href="gioi-thieu.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-colors" data-id="sgu0x2t1">Tìm hiểu ngay</a>
         <a href="tuyen-sinh.html" class="border border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full font-medium transition-colors" data-id="ynozajgs">Tuyển sinh 2025</a>
@@ -316,14 +317,15 @@
             <img src="img/gallery4.jpg" alt="graduation ceremony" class="w-full h-64 object-cover rounded-lg" loading="lazy" data-id="j2f8wmky">
           </div>
         </div>
-        <div class="swiper-button-prev text-white bg-blue-600 p-4 rounded-full hover:bg-blue-700" data-id="zazxhioo"><i class="fas fa-chevron-left" data-id="8olssmq1"></i></div>
-        <div class="swiper-button-next text-white bg-blue-600 p-4 rounded-full hover:bg-blue-700" data-id="wzo635cj"><i class="fas fa-chevron-right" data-id="xe4ftn2c"></i></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev text-white bg-blue-600 p-4 rounded-full hover:bg-blue-700" data-id="zazxhioo"><i class="fas fa-arrow-left" data-id="8olssmq1"></i></div>
+        <div class="swiper-button-next text-white bg-blue-600 p-4 rounded-full hover:bg-blue-700" data-id="wzo635cj"><i class="fas fa-arrow-right" data-id="xe4ftn2c"></i></div>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-16 bg-white" data-id="56w60jcu">
+  <section class="py-16 bg-white faq-section" data-id="56w60jcu">
     <div class="container mx-auto px-4 max-w-4xl" data-id="g7n2o4zn">
       <div class="text-center mb-12" data-id="3q7xur4s">
         <h2 class="text-3xl font-bold text-gray-800 mb-4" data-id="m7h205ho">Câu hỏi thường gặp</h2>
@@ -334,7 +336,7 @@
         <!-- FAQ 1 -->
         <div class="ac border-b border-gray-200" data-id="nr408h0j">
           <h3 class="ac-header" data-id="77a7phk8">
-            <button class="ac-trigger flex justify-between items-center w-full py-4 text-left font-medium text-gray-800 hover:text-blue-600" data-id="6zzwhfvu">
+            <button class="ac-trigger flex justify-between items-center w-full px-4 py-4 text-left font-medium text-gray-800 hover:text-blue-600" data-id="6zzwhfvu">
               <span data-id="vcl6v167">Trường có những chương trình học bổng nào?</span>
               <i class="fas fa-chevron-down text-xs transition-transform" data-id="weut8eul"></i>
             </button>
@@ -349,7 +351,7 @@
         <!-- FAQ 2 -->
         <div class="ac border-b border-gray-200" data-id="598l3euw">
           <h3 class="ac-header" data-id="gxm6vb50">
-            <button class="ac-trigger flex justify-between items-center w-full py-4 text-left font-medium text-gray-800 hover:text-blue-600" data-id="5fklkish">
+            <button class="ac-trigger flex justify-between items-center w-full px-4 py-4 text-left font-medium text-gray-800 hover:text-blue-600" data-id="5fklkish">
               <span data-id="i5kiilbz">Thời gian tuyển sinh năm học 2025-2026?</span>
               <i class="fas fa-chevron-down text-xs transition-transform" data-id="bvx4ajhv"></i>
             </button>
@@ -364,7 +366,7 @@
         <!-- FAQ 3 -->
         <div class="ac border-b border-gray-200" data-id="wwyhk6o5">
           <h3 class="ac-header" data-id="3bpfzgtb">
-            <button class="ac-trigger flex justify-between items-center w-full py-4 text-left font-medium text-gray-800 hover:text-blue-600" data-id="yuo8768k">
+            <button class="ac-trigger flex justify-between items-center w-full px-4 py-4 text-left font-medium text-gray-800 hover:text-blue-600" data-id="yuo8768k">
               <span data-id="oyd917c3">Trường có chương trình ngoại ngữ nào?</span>
               <i class="fas fa-chevron-down text-xs transition-transform" data-id="tbdksj7z"></i>
             </button>
@@ -380,12 +382,13 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="py-16 bg-gray-50" data-id="1hzob2ry">
-    <div class="container mx-auto px-4" data-id="8ntzu48g">
+  <section class="py-16 bg-gray-50 contact-section" data-id="1hzob2ry">
+    <div class="contact-backdrop"></div>
+    <div class="container mx-auto px-4 contact-content" data-id="8ntzu48g">
       <div class="grid md:grid-cols-2 gap-12 items-center" data-id="6wr4m4vu">
         <div data-id="u0yfmudf">
-          <h2 class="text-3xl font-bold text-gray-800 mb-4" data-id="xf6qqn6p">Liên hệ với chúng tôi</h2>
-          <p class="text-gray-600 mb-6" data-id="wiaufq49">Mọi thắc mắc và yêu cầu hỗ trợ, vui lòng liên hệ qua thông tin dưới đây:</p>
+          <h2 class="text-3xl font-bold contact-title mb-4" data-id="xf6qqn6p">Liên hệ với chúng tôi</h2>
+          <p class="contact-text mb-6" data-id="wiaufq49">Mọi thắc mắc và yêu cầu hỗ trợ, vui lòng liên hệ qua thông tin dưới đây:</p>
           
           <div class="space-y-4" data-id="xatm4sdj">
             <div class="flex items-start space-x-4" data-id="t97bngld">
@@ -393,8 +396,8 @@
                 <i class="fas fa-map-marker-alt text-blue-600" data-id="t4cbelzu"></i>
               </div>
               <div data-id="2kmbcinj">
-                <h4 class="font-bold text-gray-800" data-id="00am04vb">Địa chỉ</h4>
-                <p class="text-gray-600" data-id="235sabtz">123 Đường Lê Duẩn, Quận Hải Châu, TP. Đà Nẵng</p>
+                <h4 class="font-bold contact-heading" data-id="00am04vb">Địa chỉ</h4>
+                <p class="contact-text" data-id="235sabtz">123 Đường Lê Duẩn, Quận Hải Châu, TP. Đà Nẵng</p>
               </div>
             </div>
             
@@ -403,8 +406,8 @@
                 <i class="fas fa-phone-alt text-blue-600" data-id="3vpx1iqo"></i>
               </div>
               <div data-id="dga1oogu">
-                <h4 class="font-bold text-gray-800" data-id="bfvzop5d">Điện thoại</h4>
-                <p class="text-gray-600" data-id="c3kvkhhx">0236 3821 123 - 0236 3821 456</p>
+                <h4 class="font-bold contact-heading" data-id="bfvzop5d">Điện thoại</h4>
+                <p class="contact-text" data-id="c3kvkhhx">0236 3821 123 - 0236 3821 456</p>
               </div>
             </div>
             
@@ -413,8 +416,8 @@
                 <i class="fas fa-envelope text-blue-600" data-id="rkk1zmz2"></i>
               </div>
               <div data-id="fl5zmzhg">
-                <h4 class="font-bold text-gray-800" data-id="1se99ccw">Email</h4>
-                <p class="text-gray-600" data-id="0izynb9x">contact@oik.edu.vn</p>
+                <h4 class="font-bold contact-heading" data-id="1se99ccw">Email</h4>
+                <p class="contact-text" data-id="0izynb9x">contact@oik.edu.vn</p>
               </div>
             </div>
           </div>
