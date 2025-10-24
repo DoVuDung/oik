@@ -138,7 +138,7 @@ ul {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none; /* Hidden by default */
     flex-direction: column;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -231,7 +231,7 @@ ul {
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1001;
+    z-index: 999;
 }
 
 /* Chatbox Preview Styles - from chatbox-guide.css */
@@ -266,6 +266,8 @@ ul {
 /* FAQ Section Styles */
 .faq-section {
     /* No z-index needed for normal document flow */
+    position: relative;
+    z-index: 1;
 }
 
 /* Accordion Styles for FAQ */
@@ -275,20 +277,36 @@ ul {
 
 .ac {
     position: relative;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .ac-header {
     position: relative;
+    background-color: #f8f9fa; /* Light gray background for headers */
+    border-bottom: 1px solid #e9ecef;
 }
 
 .ac-trigger {
     position: relative;
+    background-color: #f8f9fa; /* Match header background */
+    transition: background-color 0.3s ease;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+.ac-trigger:hover {
+    background-color: #e9ecef; /* Slightly darker on hover */
 }
 
 .ac-panel {
     position: relative;
     /* Ensure the panel is visible when expanded */
     visibility: visible;
+    background-color: #ffffff; /* White background for content */
 }
 
 .ac-panel[hidden] {
@@ -297,6 +315,8 @@ ul {
 
 .ac-text {
     position: relative;
+    background-color: #ffffff; /* Ensure content has white background */
+    padding: 1rem 1.5rem;
 }
 
 /* User profile display */

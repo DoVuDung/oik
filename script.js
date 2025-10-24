@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const sendMessage = document.getElementById('sendMessage');
   
   // Toggle chatbox visibility
-  openChatbox.addEventListener('click', () => {
+  openChatbox.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent event from bubbling up
     chatboxContainer.style.display = 'flex';
     openChatbox.style.display = 'none';
     userMessage.focus();
@@ -118,10 +119,18 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Close chatbox when clicking outside
   document.addEventListener('click', (e) => {
-    if (!chatboxContainer.contains(e.target) && e.target !== openChatbox && chatboxContainer.style.display === 'flex') {
+    // Check if chatbox is open and click is outside chatbox container
+    if (chatboxContainer.style.display === 'flex' && 
+        !chatboxContainer.contains(e.target) && 
+        e.target !== openChatbox) {
       chatboxContainer.style.display = 'none';
       openChatbox.style.display = 'block';
     }
+  });
+  
+  // Prevent chatbox from closing when clicking inside it
+  chatboxContainer.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
   
   // Login/Signup functionality
@@ -433,19 +442,32 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize Swiper
   if (typeof Swiper !== 'undefined') {
-    new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+    // Get all swiper elements
+    const swiperElements = document.querySelectorAll('.swiper');
+    
+    swiperElements.forEach(swiperEl => {
+      // Get options from data attribute
+      const options = JSON.parse(swiperEl.dataset.swiperOptions || '{}');
+      
+      // Merge with default options
+      const swiperConfig = {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        ...options
+      };
+      
+      // Initialize Swiper
+      new Swiper(swiperEl, swiperConfig);
     });
   }
   
